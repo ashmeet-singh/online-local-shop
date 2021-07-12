@@ -6,95 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shop</title>
-    <style>
-        body {
-            background-color: #f5f5f5;
-            padding: 0px;
-            margin: 0px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            margin: 0px;
-            padding: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-            user-select: none;
-        }
-
-        #main_heading {
-            background-color: #4caf50;
-            padding: 8px;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        #select_items_heading {
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #aaaaaa;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        .item_container {
-            background-color: #ffffff;
-            display: block;
-            margin: 20px auto;
-            max-width: 480px;
-            border-style: solid;
-            border-color: #444444;
-            border-width: 0px 0px 1px 0px;
-            padding: 4px;
-            cursor: pointer;
-        }
-
-        .item_image {
-            display: block;
-            width: 100%;
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .item_label,
-        .item_info {
-            margin: 0px;
-            padding: 4px 4px;
-        }
-    </style>
+    <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/item.css">
 </head>
 
 <body>
-    <h1 id="main_heading">My Shop</h1>
-    <h2 id="select_items_heading">Select Items</h2>
-    <div class="item_container">
-        <img class="item_image" src="images/watch.jpg">
-        <h3 class="item_label">Smart Watch</h3>
-        <p class="item_info">
-            Touch Display: Supported<br>
-            Batter Life: 2 Days<br>
-            Price: 100<br>
-            You can receive notifications directly to watch from your smart phone
-        </p>
+    <h1 id="MainHeading">My Shop</h1>
+    <div class="items_container" id="ItemsContainer">
+        <div class="item_container" v-for="item in items">
+            <img class="item_image" v-bind:src="item.imgSrc">
+            <h3 class="item_label">{{ item.label }}</h3>
+        </div>
     </div>
-    <div class="item_container">
-        <img class="item_image" src="images/sunglass.jpg">
-        <h3 class="item_label">Sunglass</h3>
-        <p class="item_info">
-            Colour: Black<br>
-            Price: 200<br>
-            It will protect you from sunlight
-        </p>
-    </div>
-    <div class="item_container">
-        <img class="item_image" src="images/headphone.jpg">
-        <h3 class="item_label">Headphone</h3>
-        <p class="item_info">
-            Bluetooth: Supported<br>
-            Price: 300<br>
-            Sound quality of these headphones are really good
-        </p>
-    </div>
+
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

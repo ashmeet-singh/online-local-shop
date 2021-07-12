@@ -1,0 +1,24 @@
+.item_container {
+    display: block;
+    margin: 20px auto;
+    max-width: 480px;
+    border-style: solid;
+    border-color: #37966f;
+    border-width: 0px 0px 1px 0px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+
+.item_image {
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.item_label{
+    text-align: center;
+    color: #fd5523;
+}
