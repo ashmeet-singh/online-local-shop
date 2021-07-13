@@ -1,12 +1,11 @@
 .item_container {
     display: block;
-    margin: 20px auto;
+    margin: 16px auto;
     max-width: 480px;
     border-style: solid;
     border-color: #37966f;
     border-width: 0px 0px 1px 0px;
     padding: 4px;
-    cursor: pointer;
 }
 
 
@@ -19,6 +18,34 @@
 }
 
 .item_label{
+    margin:0px;
+    padding:10px;
     text-align: center;
     color: #fd5523;
+}
+
+.item_selector,
+.item_qty_selector  {
+    margin:0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_selector > button,
+.item_qty_selector > button{
+    border: none;
+    margin:0px;
+    padding:10px;
+    font-size: 16px;
+    color:#37966f;
+    background-color: transparent;
+}
+
+.item_details{
+    text-align: center;
+    margin:0px;
+    padding:10px;
+    color: #356859;
 }

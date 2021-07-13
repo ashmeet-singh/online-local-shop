@@ -2,7 +2,7 @@ body{
     background-color: #fffbe6;
 }
 h1,h2,h3{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 #MainHeading {
@@ -13,4 +13,8 @@ h1,h2,h3{
     border-style: solid;
     border-color: #356859;
     border-width: 0px 0px 2px 0px;
+}
+
+button{
+    user-select: none;
 }
