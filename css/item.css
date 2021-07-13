@@ -49,3 +49,28 @@
     padding:10px;
     color: #356859;
 }
+
+.items_order_sender{
+    position: fixed;
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    bottom:0px;
+    left: 0px;
+    background-color: #fffbe6;
+    border-style: solid;
+    border-color: #356859;
+    border-width: 2px 0px 0px 0px;
+    margin:0px;
+    padding: 0px;
+}
+
+.items_order_sender > p,
+.items_order_sender > button{
+    border: none;
+    margin:0px;
+    padding:12px;
+    font-size: 20px;
+    color:#37966f;
+    background-color: transparent;
+}

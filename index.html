@@ -12,26 +12,35 @@
 </head>
 
 <body>
-    <h1 id="MainHeading">My Amazing Shop</h1>
-    <div class="items_container" id="ItemsContainer">
-        <div class="item_container" v-for="item in items">
-            <img class="item_image" v-bind:src="item.imgSrc">
-            <h3 class="item_label">{{ item.label }}</h3>
-            <p class="item_details" v-if="item.isDetailsVisible">{{ item.details }}</p>
-            <div class="item_selector">
-                <button v-if="!item.isDetailsVisible && item.details !== undefined" v-on:click="showItemDetails(item)" style="color: #356859;">Show Details</button>
-                <button v-if="item.isDetailsVisible" v-on:click="hideItemDetails(item)" style="color: #356859;">Hide Details</button>
-                <button v-if="!item.isSelected" v-on:click="addItemToOrder(item)">Add To Order</button>
-                <button v-if="item.isSelected" v-on:click="removeItemFromOrder(item)" style="color: #fd5523;">Remove From Order</button>
+    <div id="app">
+        <h1 id="MainHeading">My Amazing Shop</h1>
+
+        <div class="items_container">
+
+            <div class="item_container" v-for="item in items">
+                <img class="item_image" v-bind:src="item.imgSrc">
+                <h3 class="item_label">{{ item.label }}</h3>
+                <p class="item_details" v-if="item.isDetailsVisible">{{ item.details }}</p>
+                <div class="item_selector">
+                    <button v-if="!item.isDetailsVisible && item.details !== undefined" v-on:click="showItemDetails(item)" style="color: #356859;">Show Details</button>
+                    <button v-if="item.isDetailsVisible" v-on:click="hideItemDetails(item)" style="color: #356859;">Hide Details</button>
+                    <button v-if="!item.isSelected" v-on:click="addItemToOrder(item)">Add To Order</button>
+                    <button v-if="item.isSelected" v-on:click="removeItemFromOrder(item)" style="color: #fd5523;">Remove From Order</button>
+                </div>
+                <div class="item_qty_selector" v-if="item.isSelected">
+                    <button style="color: #356859;">Qty: {{ item.orderQty }}</button>
+                    <button v-on:click="decreaseItemQty(item)">Decrease</button>
+                    <button v-on:click="increaseItemQty(item)">Increase</button>
+                </div>
             </div>
-            <div class="item_qty_selector" v-if="item.isSelected">
-                <button style="color: #356859;">Qty: {{ item.orderQty }}</button>
-                <button v-on:click="decreaseItemQty(item)">Decrease</button>
-                <button v-on:click="increaseItemQty(item)">Increase</button>
-            </div>
+
+        </div>
+        <div style="margin-top: 200px;"></div>
+        <div class="items_order_sender">
+            <p>Total: ${{totalCostOfSelectedItems}}</p>
+            <button v-on:click="sendOrder()">Send Order</button>
         </div>
     </div>
-
 
     <script src="js/main.js"></script>
 </body>
