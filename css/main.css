@@ -4,17 +4,35 @@ body{
 h1,h2,h3{
     font-family: Helvetica, Arial, sans-serif;
 }
+button{
+    user-select: none;
+}
 
 #MainHeading {
     text-align: center;
     color: #356859;
-    margin:0px;
+    margin:0px 0px 16px 0px;
     padding: 8px;
     border-style: solid;
     border-color: #356859;
     border-width: 0px 0px 2px 0px;
 }
 
-button{
-    user-select: none;
+#ItemsSearchInput{
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 480px;
+    border:none;
+    background-color:#fffbe6;
+    outline: none;
+    color: #fd5523;
+    font-size: 18px;
+    text-align: center;
+    padding: 0px;
+}
+
+#ItemsSearchInput::placeholder{
+    color:#fd5523;
+    opacity: 1;
 }
