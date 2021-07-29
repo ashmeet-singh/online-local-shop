@@ -14,7 +14,7 @@
 <body>
     <div id="app">
         <h1 id="MainHeading">My Amazing Shop</h1>
-        <input id="ItemsSearchInput" type="text" placeholder="Search">
+        <input id="ItemsSearchInput" type="text" placeholder="Search" v-model="itemsSearchInputText">
         <div class="items_container">
 
             <div class="item_container" v-for="item in items">
