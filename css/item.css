@@ -1,6 +1,6 @@
 .item_container {
     display: block;
-    margin: 16px auto;
+    margin: 0px auto 16px auto;
     max-width: 480px;
     border-style: solid;
     border-color: #37966f;
