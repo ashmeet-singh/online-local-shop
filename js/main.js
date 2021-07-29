@@ -26,7 +26,7 @@ var VueAppConfiguration = {
             item.orderQty = 1;
             item.imgSrc = this.itemsImagesRoot + item.imgSrc;
             item.label += ' - ' + this.currency + item.price;
-            item._index = i;
+            item.index = i;
             if (item.priority === undefined) { item.priority = 0; }
         }
 
@@ -54,13 +54,13 @@ var VueAppConfiguration = {
 
                     if (a.priority !== b.priority) { return (b.priority - a.priority); };
 
-                    return (a._index - b._index);
+                    return (a.index - b.index);
                 });
             } else {
                 this.items.sort(function (a, b) {
                     if (a.priority !== b.priority) { return (b.priority - a.priority); };
 
-                    return (a._index - b._index);
+                    return (a.index - b.index);
                 });
             };
 
