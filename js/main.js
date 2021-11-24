@@ -109,7 +109,6 @@ var VueAppConfiguration = {
                 if (item.isSelected === true) {
                     orderText += item.label + ' x ' + item.orderQty + '\n';
                 }
-
             }
 
             if (orderText === 'Order: \n') { return undefined; }
